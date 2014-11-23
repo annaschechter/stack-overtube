@@ -42,4 +42,9 @@ angular.module('stackOverTubeApp').config(['$urlRouterProvider', '$stateProvider
     templateUrl: '/views/aboutus.html'
   })
 
+  .state('question', {
+    url: '/question/:questionId',
+    templateUrl: '/views/question.html'
+  })
+
 }])
