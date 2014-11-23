@@ -13,6 +13,14 @@ angular.module('stackOverTubeApp').controller('AllquestionsCtrl', function ($sco
 
       getQuestions();
 
+      $scope.upVoteQuestion = function(question) {
+        question.votes++;
+      }
+
+      $scope.upViewQuestion = function(question) {
+        question.views++;
+      }
+
 
 
 
