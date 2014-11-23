@@ -1,13 +1,13 @@
+'use strict';
 
+angular.module('stackOverTubeApp').config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
 
-angular.module('stackOverTubeApp').config(function($urlRouterProvider, $stateProvider) {
-
-  $urlRouterProvider.otherwise('/')
+  $urlRouterProvider.otherwise('/');
 
 
   $stateProvider
 
-    .state('askquestion', {
+  .state('askquestion', {
     url: '/askquestion',
     templateUrl: '/views/askquestion.html'
   })
@@ -37,5 +37,4 @@ angular.module('stackOverTubeApp').config(function($urlRouterProvider, $statePro
     templateUrl: '/views/aboutus.html'
   })
 
-
-})
+}])
