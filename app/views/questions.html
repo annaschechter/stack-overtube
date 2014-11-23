@@ -5,7 +5,21 @@
       <ul class="thumbnails">
         <li ng-repeat="question in questions">
            <div class="row question">
+
+
+
+              <div class="votingButton" ng-click="upVoteSession(session)">
+
+
+
+              </div>
+
+
             <div class="well span9">
+             <div style="float:left; padding: 10px; vertical-align: middle;"><a href="#" class="btn btn-success">{{question.views}}</a><p>Views</p></div>
+             <div style="float:left; padding: 10px;vertical-align: middle;"><a href="#" class="btn btn-success">{{question.votes}}</a><p>Votes</p></div>
+              <div style="float:left; padding: 10px;vertical-align: middle;"><a href="#" class="btn btn-success">{{question.numberAnswers}}</a><p>Videos</p></div>
+
             <h4 class="well-title">{{question.title}}</h4>
             <h6 style="margin-top:-10px">{{question.creatorName}}</h6>
             <span>Author: {{question.creatorUser}}</span><br/>
