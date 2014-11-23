@@ -12,6 +12,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/bootstrap.yeti.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -25,12 +26,12 @@
       <div class="header">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a ng-href="#">QUESTIONS</a></li>
-          <li><a ng-href="#/askquestion">ASK A QUESTION</a></li>
-          <li><a ng-href="#/tags">TAGS</a></li>
-          <li><a ng-href="#/allvideos">ALL VIDEOS</a></li>
-          <li><a ng-href="#/unaswered">UNANSWERED</a></li>
-          <li><a ng-href="#/register">REGISTER</a></li>
-          <li><a ng-href="#/aboutus">ABOUT US</a></li>
+          <li><a ui-sref="askquestion">ASK A QUESTION</a></li>
+          <li><a ui-sref="tags">TAGS</a></li>
+          <li><a ui-sref="allvideos">ALL VIDEOS</a></li>
+          <li><a ui-sref="unanswered">UNANSWERED</a></li>
+          <li><a ui-sref="register">REGISTER</a></li>
+          <li><a ui-sref="aboutus">ABOUT US</a></li>
         </ul>
         <h3 class="text-muted">stackOverTube</h3>
       </div>

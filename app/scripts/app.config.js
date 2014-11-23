@@ -1,6 +1,10 @@
 
 
-angular.module('stackOverTubeApp').config(function($stateProvider) {
+angular.module('stackOverTubeApp').config(function($urlRouterProvider, $stateProvider) {
+
+  $urlRouterProvider.otherwise('/')
+
+
   $stateProvider
 
     .state('askquestion', {
