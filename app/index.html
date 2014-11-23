@@ -25,7 +25,8 @@
     <div class="container">
       <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li><a ng-href="#">QUESTIONS</a></li>
+          <li><a ng-href="#">Homepage</a></li>
+          <li><a ui-sref="questions">QUESTIONS</a></li>
           <li><a ui-sref="askquestion">ASK A QUESTION</a></li>
           <li><a ui-sref="tags">TAGS</a></li>
           <li><a ui-sref="allvideos">ALL VIDEOS</a></li>
@@ -77,6 +78,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/app.config.js"></script>
         <script src="scripts/controllers/allquestions.js"></script>
+        <script src="scripts/services/question.js"></script>
         <!-- endbuild -->
 </body>
 </html>

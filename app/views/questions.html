@@ -1,1 +1,22 @@
-<p>This is the Questions view.</p>
+<h3>Top questions</h3>
+
+
+    <div ng-cloak ng-controller="AllquestionsCtrl">
+      <ul class="thumbnails">
+        <li ng-repeat="question in questions">
+           <div class="row question">
+            <div class="well span9">
+            <h4 class="well-title">{{question.title}}</h4>
+            <h6 style="margin-top:-10px">{{question.creatorName}}</h6>
+            <span>Author: {{question.creatorUser}}</span><br/>
+            <span>tags: {{question.tags}}</span>
+            <p>{{question.lastReply}}</p>
+          </div>
+        </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
