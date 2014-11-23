@@ -22,11 +22,14 @@
               <a href="" ng-click="upViewQuestion(question)" class="well-title">{{question.title}}</a>
               <h6 style="margin-top:-10px">{{question.creatorName}}</h6>
               <span>Author: {{question.creatorUser}}</span><br/>
-            <!--   <span>tags: {{question.tags}}</span> -->
-             <p>{{question.lastReply}}</p>
-            <li ng-repeat="tag in question.tags">
-              <div><a href="" class="btn btn-success"></a>{{tag}}</div>
-            </ul>
+               <p>{{question.lastReply}}</p>
+               <br />
+              <div class="row">
+              <div ng-repeat="tag in question.tags">
+                <a style="float:right; padding: 5px; margin: 5px; vertical-align: middle;" href="" class="btn btn-primary btn-xs">{{tag.name}}</a>
+              </div>
+
+
             </div>
             </div>
         </li>

@@ -4,9 +4,102 @@
      "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
      "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
      "tags":[
-        "javascript",
-        "validations",
-        "regex"
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
+     ],
+     "views":15,
+     "votes":5,
+     "askedTime":"01-11-14",
+     "creatorUser":"ObjectUserAnna",
+     "videoAnswers":"ObjectVideoID13",
+     "lastReply":"20-11-14",
+     "numberAnswers":3,
+     "followers":[
+        "ObjectUserAnna",
+        "ObjectUserPablo"
+     ],
+     "gitRepositoryUrl":"https://github.com/galicians/tokenAuth",
+     "deployedAt":"deployedUrl"
+  },
+  {
+     "title":"JavaScript Regular Expression Email Validation",
+     "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
+     "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
+   "tags":[
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
+     ],
+     "views":25,
+     "votes":7,
+     "askedTime":"01-11-14",
+     "creatorUser":"ObjectUserCraig",
+     "videoAnswers":"ObjectVideoID13",
+     "lastReply":"20-11-14",
+     "numberAnswers":3,
+     "followers":[
+        "ObjectUserAnna",
+        "ObjectUserCraig"
+     ],
+     "gitRepositoryUrl":"https://github.com/galicians/tokenAuth",
+     "deployedAt":"deployedUrl"
+  },
+  {
+     "title":"JavaScript Regular Expression Email Validation",
+     "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
+     "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
+   "tags":[
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
+     ],
+     "views":15,
+     "votes":3,
+     "askedTime":"01-11-14",
+     "creatorUser":"ObjectUserJames",
+     "videoAnswers":"ObjectVideoID13",
+     "lastReply":"20-11-14",
+     "numberAnswers":3,
+     "followers":[
+        "ObjectUserJames",
+        "ObjectUserJames"
+     ],
+     "gitRepositoryUrl":"https://github.com/galicians/tokenAuth",
+     "deployedAt":"deployedUrl"
+  },
+  {
+     "title":"JavaScript Regular Expression Email Validation",
+     "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
+     "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
+  "tags":[
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
      ],
      "views":15,
      "votes":5,
@@ -27,9 +120,15 @@
      "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
      "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
      "tags":[
-        "javascript",
-        "validations",
-        "regex"
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
      ],
      "views":25,
      "votes":7,
@@ -49,10 +148,16 @@
      "title":"JavaScript Regular Expression Email Validation",
      "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
      "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
-     "tags":[
-        "javascript",
-        "validations",
-        "regex"
+        "tags":[
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
      ],
      "views":15,
      "votes":3,
@@ -72,33 +177,16 @@
      "title":"JavaScript Regular Expression Email Validation",
      "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
      "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
-     "tags":[
-        "javascript",
-        "validations",
-        "regex"
-     ],
-     "views":15,
-     "votes":5,
-     "askedTime":"01-11-14",
-     "creatorUser":"ObjectUserAnna",
-     "videoAnswers":"ObjectVideoID13",
-     "lastReply":"20-11-14",
-     "numberAnswers":3,
-     "followers":[
-        "ObjectUserAnna",
-        "ObjectUserPablo"
-     ],
-     "gitRepositoryUrl":"https://github.com/galicians/tokenAuth",
-     "deployedAt":"deployedUrl"
-  },
-  {
-     "title":"JavaScript Regular Expression Email Validation",
-     "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
-     "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
-     "tags":[
-        "javascript",
-        "validations",
-        "regex"
+      "tags":[
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
      ],
      "views":25,
      "votes":7,
@@ -118,56 +206,16 @@
      "title":"JavaScript Regular Expression Email Validation",
      "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
      "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
-     "tags":[
-        "javascript",
-        "validations",
-        "regex"
-     ],
-     "views":15,
-     "votes":3,
-     "askedTime":"01-11-14",
-     "creatorUser":"ObjectUserJames",
-     "videoAnswers":"ObjectVideoID13",
-     "lastReply":"20-11-14",
-     "numberAnswers":3,
-     "followers":[
-        "ObjectUserJames",
-        "ObjectUserJames"
-     ],
-     "gitRepositoryUrl":"https://github.com/galicians/tokenAuth",
-     "deployedAt":"deployedUrl"
-  },
-  {
-     "title":"JavaScript Regular Expression Email Validation",
-     "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
-     "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
-     "tags":[
-        "javascript",
-        "validations",
-        "regex"
-     ],
-     "views":25,
-     "votes":7,
-     "askedTime":"01-11-14",
-     "creatorUser":"ObjectUserCraig",
-     "videoAnswers":"ObjectVideoID13",
-     "lastReply":"20-11-14",
-     "numberAnswers":3,
-     "followers":[
-        "ObjectUserAnna",
-        "ObjectUserCraig"
-     ],
-     "gitRepositoryUrl":"https://github.com/galicians/tokenAuth",
-     "deployedAt":"deployedUrl"
-  },
-  {
-     "title":"JavaScript Regular Expression Email Validation",
-     "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
-     "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
-     "tags":[
-        "javascript",
-        "validations",
-        "regex"
+      "tags":[
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
      ],
      "views":15,
      "votes":3,
@@ -188,9 +236,15 @@
      "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
      "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
      "tags":[
-        "javascript",
-        "validations",
-        "regex"
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
      ],
      "views":25,
      "votes":7,
@@ -210,10 +264,16 @@
      "title":"JavaScript Regular Expression Email Validation",
      "body":"For the love of God I am not getting this easy code to work! It is always alerting out null which means that the string does not match the expression.",
      "codeSnippet":"var pattern = w+@[a-zA-Z_]+?.[a-zA-Z]{2,3}$",
-     "tags":[
-        "javascript",
-        "validations",
-        "regex"
+      "tags":[
+        {
+            "name": "javascript"
+        },
+        {
+            "name": "model-view-controller"
+        },
+        {
+            "name": "OOP"
+        }
      ],
      "views":15,
      "votes":3,
