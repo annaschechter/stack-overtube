@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-  .module('stackOverTubeApp', []);
+  .module('stackOverTubeApp', ['ui.router']);
