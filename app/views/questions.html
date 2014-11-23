@@ -9,13 +9,7 @@
           <option selected value="-views">Views</option>
           <option value="-votes">Votes</option>
       </select>
-     <!--  Show:
-      <select ng-model="query.level" class="input-medium">
-            <option selected value="">All</option>
-            <option selected value="introductory">Introductory</option>
-            <option selected value="intermediate">Intermediate</option>
-            <option selected value="advanced">Advanced</option>
-        </select> -->
+      Search: <input ng-model="query">
 
       <ul class="thumbnails">
         <li ng-repeat="question in questions | orderBy:sortorder| filter:query">
