@@ -9,8 +9,8 @@
           <option selected value="-views">Views</option>
           <option value="-votes">Votes</option>
       </select>
-      Search: <input ng-model="query">
 
+<input type="text" style="float:right;" ng-model="query" placeholder="Search">
       <ul class="thumbnails">
         <li ng-repeat="question in questions | orderBy:sortorder| filter:query">
           <div class="row question">
