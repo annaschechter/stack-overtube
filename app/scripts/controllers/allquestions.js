@@ -10,6 +10,7 @@ angular.module('stackOverTubeApp').controller('AllquestionsCtrl', function ($sco
        })
       };
 
+      $scope.sortorder = "-views"
 
       getQuestions();
 

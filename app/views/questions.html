@@ -3,9 +3,23 @@
 
     <div  ng-controller="AllquestionsCtrl">
 
+
+      Order By:
+      <select ng-model="sortorder" class="input-small">
+          <option selected value="-views">Views</option>
+          <option value="-votes">Votes</option>
+      </select>
+     <!--  Show:
+      <select ng-model="query.level" class="input-medium">
+            <option selected value="">All</option>
+            <option selected value="introductory">Introductory</option>
+            <option selected value="intermediate">Intermediate</option>
+            <option selected value="advanced">Advanced</option>
+        </select> -->
+
       <ul class="thumbnails">
-        <li ng-repeat="question in questions">
-          <div class="row session">
+        <li ng-repeat="question in questions | orderBy:sortorder| filter:query">
+          <div class="row question">
             <div class="well span9">
               <div style="float:left; padding: 10px; vertical-align: middle;"><a href="" class="btn btn-success">{{question.views}}</a><p>Views</p></div>
               <div ng-click="upVoteQuestion(question)" style="float:left; padding: 10px;vertical-align: middle;"><a href="" class="btn btn-success">{{question.votes}}</a><p>Votes</p></div>
@@ -14,8 +28,11 @@
               <a href="" ng-click="upViewQuestion(question)" class="well-title">{{question.title}}</a>
               <h6 style="margin-top:-10px">{{question.creatorName}}</h6>
               <span>Author: {{question.creatorUser}}</span><br/>
-              <span>tags: {{question.tags}}</span>
-              <p>{{question.lastReply}}</p>
+            <!--   <span>tags: {{question.tags}}</span> -->
+             <p>{{question.lastReply}}</p>
+            <li ng-repeat="tag in question.tags">
+              <div><a href="" class="btn btn-success"></a>{{tag}}</div>
+            </ul>
             </div>
             </div>
         </li>
