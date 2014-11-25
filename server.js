@@ -1,22 +1,14 @@
 var app = require('express')();
 var server = require('http').createServer(app);
-var Question = require('./models/question.js');
 var bodyParser = require('body-parser');
 var models = require('./models');
 var fs = require('fs');
 var AWS = require('aws-sdk');
 var uuid = require('node-uuid');
 var busboy = require('connect-busboy');
-
-// Create an S3 client
 var s3 = new AWS.S3();
 var keyName = "interface.js"
-
-// Create a bucket and upload something into it
-var params = { Bucket: 'annas-second-test-bucket',  Key: 'pablofile.txt'}
-
-
-
+var params = { Bucket: 'annas-second-test-bucket',  Key: 'pablofile.txt', Body: fs.readFile('interface.js')}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -34,7 +26,6 @@ app.get('/', function(req, res) {
 app.post('/upload', function(req, res) {
 	var fstream;
 	console.log(req.busboy);
-	// var file = file.createWriteSteam(req.busboy)
 	req.pipe(req.busboy);
 	req.busboy.on('file', function(fieldname, file, filename) {
 		console.log("uploading: "+filename)
@@ -49,16 +40,6 @@ app.post('/upload', function(req, res) {
 	var amazon = fs.createWriteStream(__dirname + '/views/' + 'index.ejs');
 	s3.putObject(params).createReadStream().pipe(amazon);
 	console.log(amazon);
-
-		// s3.createBucket({Bucket: bucketName}, function() {
-		//   var params = {Bucket: bucketName, Key: keyName};
-		//   s3.putObject(params, function(err, data) {
-		//     if (err)
-		//       console.log(err)
-		//     else
-		//       console.log("Successfully uploaded data to " + bucketName + "/" + keyName);
-		//   });
-		// });
 
 })
 
