@@ -9,23 +9,31 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }))
 
-app.get('/', function(req, res) {
-	res.render('index');
-});
-
 app.post('/askquestion', function(req, res) {
 	var question = req.body;
 		console.log(req.body);
-	models.Question.create({ title: question.title, description: question.description, codeSnippet: question.codeSnippet, githubRepo: question.githubRepo });
+	models.Question.create({ title: question.title, description: question.description, codeSnippet: question.codeSnippet, githubRepo: question.githubRepo, votes: question.votes });
 });
 
 app.get('/question/:id', function(req, res) {
-	var id = req.url.toString().split('/').slice(-1)[0];
+	var id = req.params.id;
 	console.log(id);
 	var currentQuestion = models.Question.find( {where:{id: id}} ).complete(function(err, question) {
 		console.log(question.title);
 		console.log(question.description);
 	});
+	var questionReplies = models.Reply.find( {where: {questionId: id}} ).complete(function(err, reply) {
+		console.log(reply.link);
+	});
+
+});
+
+app.post('/postreply/:id', function(req, res) {
+	var id = req.params.id;
+	var reply = models.Reply.create({ link: req.body.link, QuestionId: id }).complete(function(err, reply) {
+		console.log(reply.link);
+	});
+
 });
 
 module.exports = app

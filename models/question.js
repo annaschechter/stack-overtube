@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
 	  title: DataTypes.STRING,
 	  description: DataTypes.STRING,
 	  codeSnippet: DataTypes.STRING,
-	  githubRepo: DataTypes.STRING
+	  githubRepo: DataTypes.STRING,
 	}, {
 		classMethods: {
 			associate: function(models) {
