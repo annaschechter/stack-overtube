@@ -1,1 +1,17 @@
 <p>This is the askquestion view.</p>
+
+<div ng-controller="AskquestionsCtrl">
+
+  <form>
+
+    <input type="text" ng-model="title" placeholder="title">
+    </br>
+    <input type="text" ng-model="description" placeholder="description">
+    </br>
+    <input type="text" ng-model="codesnippet" placeholder="code-snippet">
+    </br>
+    <input type="text" ng-model="github" placeholder="github id">
+    <button value="submit" data-ng-click="addQuestion()">Submit</button>
+
+  </form>
+</div>

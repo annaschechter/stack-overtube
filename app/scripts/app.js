@@ -1,5 +1,5 @@
 'use strict';
 
 
-angular
+var app = angular
   .module('stackOverTubeApp', ['ui.router']);
