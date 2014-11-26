@@ -6,7 +6,7 @@ var fs = require('fs');
 var AWS = require('aws-sdk');
 var uuid = require('node-uuid');
 var busboy = require('connect-busboy');
-var s3 = new AWS.S3();
+var s3 = require('s3-upload-stream')(new AWS.S3());
 var keyName = "interface.js"
 
 
@@ -24,21 +24,9 @@ app.get('/', function(req, res) {
 });
 
 app.post('/upload', function(req, res) {
-	var fstream;
-	// console.log(req.busboy);
-	req.pipe(req.busboy);
-	req.busboy.on('file', function(fieldname, file, filename) {
-		console.log("uploading: "+filename)
-		fstream = fs.createWriteStream(__dirname + '/views/' + filename);
-		file.pipe(fstream);
-		fstream.on('close', function() {
-				console.log("Its done")
-			var params = { Bucket: 'annas-second-test-bucket',  Key: 'pablofile.txt', Body: fs.readFileSync(__dirname + '/views/' + filename)}
-			var amazon = fs.createWriteStream(__dirname + '/views/' + filename);
-			s3.putObject(params).createReadStream().pipe(amazon);
-			console.log(amazon);
-		});
-	});
+	console.log(req);
+	var upload = s3.upload({ "Bucket": "annas-second-test-bucket", "Key": "testatest.txt"})
+	req.pipe(upload);
 });
 
 app.post('/askquestion', function(req, res) {

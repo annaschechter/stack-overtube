@@ -25,6 +25,7 @@
     "express": "^4.10.3",
     "node-uuid": "^1.4.1",
     "pg": "^4.0.0",
+    "s3-upload-stream": "^1.0.6",
     "sequelize": "^2.0.0-rc2",
     "sequelize-cli": "^0.3.3"
   }
