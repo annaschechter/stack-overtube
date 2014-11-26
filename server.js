@@ -61,11 +61,21 @@ app.get('/question/:id', function(req, res) {
 });
 
 app.post('/postreply/:id', function(req, res) {
+	var reply = req.body;
 	var id = req.params.id;
-	var reply = models.Reply.create({ link: req.body.link, QuestionId: id }).complete(function(err, reply) {
+	models.Reply.create({ link: req.body.link, QuestionId: id, description: reply.description }).complete(function(err, reply) {
 		console.log(reply.link);
 	});
-
 });
 
+app.post('/newuser', function(req, res) {
+	var user = req.body;
+		console.log(req.body);
+	models.User.create({username: user.username, firstname: user.firstmame, lastname: user.lastname, email: user.email, password: user.password });
+});
+
+
 module.exports = app
+
+
+
