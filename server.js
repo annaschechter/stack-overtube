@@ -8,7 +8,7 @@ var uuid = require('node-uuid');
 var busboy = require('connect-busboy');
 var s3 = new AWS.S3();
 var keyName = "interface.js"
-var params = { Bucket: 'annas-second-test-bucket',  Key: 'pablofile.txt', Body: fs.readFile('interface.js')}
+var params = { Bucket: 'annas-second-test-bucket',  Key: 'pablofile.txt', Body: fs.readFileSync(__dirname + '/views/'+'index.ejs')}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -21,11 +21,11 @@ app.use(busboy());
 
 app.get('/', function(req, res) {
 	res.render('index');
-})
+});
 
 app.post('/upload', function(req, res) {
 	var fstream;
-	console.log(req.busboy);
+	// console.log(req.busboy);
 	req.pipe(req.busboy);
 	req.busboy.on('file', function(fieldname, file, filename) {
 		console.log("uploading: "+filename)
@@ -35,7 +35,7 @@ app.post('/upload', function(req, res) {
 			console.log("Its done")
 		});
 	});
-	console.log("this is our root:"+__dirname + '/views/' + 'interface.js')
+	// console.log("this is our root:"+__dirname + '/views/' + 'interface.js')
 
 	var amazon = fs.createWriteStream(__dirname + '/views/' + 'index.ejs');
 	s3.putObject(params).createReadStream().pipe(amazon);
