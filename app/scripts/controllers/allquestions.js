@@ -10,7 +10,7 @@ angular.module('stackOverTubeApp').controller('AllquestionsCtrl', function ($sco
        })
       };
 
-      $scope.sortorder = "-views"
+      $scope.sortorder = '-views'
 
       getQuestions();
 
@@ -22,9 +22,17 @@ angular.module('stackOverTubeApp').controller('AllquestionsCtrl', function ($sco
         question.views++;
       }
 
+    });
 
+angular.module('stackOverTubeApp').controller('QuestionRetrieverCtrl', function ($scope, $stateParams, $http){
 
+  $scope.questionId = $stateParams.questionId
 
-
+      var getBody = function () {
+        return $http.get('data/questions.json').then(function(response) {
+          $scope.question = response.data[$stateParams.questionId -1]
+      })
+      };
+      getBody()
 
   });

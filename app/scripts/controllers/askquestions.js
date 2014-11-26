@@ -7,6 +7,7 @@ app.controller('AskquestionsCtrl', function ($scope, $http, $location) {
         console.log($scope.description);
         console.log($scope.codesnippet);
         console.log($scope.github);
+        $location.path('/questions')
       };
 
   });
