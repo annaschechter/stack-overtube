@@ -8,7 +8,7 @@ var uuid = require('node-uuid');
 var busboy = require('connect-busboy');
 var s3 = new AWS.S3();
 var keyName = "interface.js"
-var params = { Bucket: 'annas-second-test-bucket',  Key: 'pablofile.txt', Body: fs.readFileSync(__dirname + '/views/'+'index.ejs')}
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -32,16 +32,14 @@ app.post('/upload', function(req, res) {
 		fstream = fs.createWriteStream(__dirname + '/views/' + filename);
 		file.pipe(fstream);
 		fstream.on('close', function() {
-			console.log("Its done")
+				console.log("Its done")
+			var params = { Bucket: 'annas-second-test-bucket',  Key: 'pablofile.txt', Body: fs.readFileSync(__dirname + '/views/' + filename)}
+			var amazon = fs.createWriteStream(__dirname + '/views/' + filename);
+			s3.putObject(params).createReadStream().pipe(amazon);
+			console.log(amazon);
 		});
 	});
-	// console.log("this is our root:"+__dirname + '/views/' + 'interface.js')
-
-	var amazon = fs.createWriteStream(__dirname + '/views/' + 'index.ejs');
-	s3.putObject(params).createReadStream().pipe(amazon);
-	console.log(amazon);
-
-})
+});
 
 app.post('/askquestion', function(req, res) {
 	var question = req.body;
