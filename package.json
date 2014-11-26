@@ -29,7 +29,7 @@
     "sequelize-cli": "^0.3.3"
   },
   "engines": {
-    "node": "v0.10.33",
+    "node": "0.10.x",
     "npm": "2.8.1"
   }
 }
